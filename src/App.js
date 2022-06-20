@@ -1,7 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import MiComponente from './MiComponente';
+import { SegundoComponente } from './SegundoComponente';
+import { TercerComponente } from './TercerComponente';
 
 function App() {
+const ficha_medica ={
+  altura: "187cm",
+  grupo: "h+",
+  estado: "Bueno",
+  alergias: "Ninguna"
+}
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -9,14 +20,14 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className='componentes'>
+        <TercerComponente
+        ficha={ficha_medica}/>
+        <hr/>
+        <SegundoComponente/>
+        <hr/>
+        <MiComponente/>
+        </div>
       </header>
     </div>
   );
